@@ -35,7 +35,7 @@ model.add(Dense(128,activation = 'relu'))
 model.add(Dense(1,activation='sigmoid'))
 model.compile(optimizer = 'adam', loss='binary_crossentropy',metrics=['accuracy'])
 print(model.summary())
-model.fit(X_train,y_train,batch_size = 32,epochs = 3)
+model.fit(X_train,y_train,batch_size = 32,epochs = 10)
 
 scores= model.evaluate(X_test,y_test)
 print(scores[1])
@@ -52,8 +52,12 @@ print(scores[1])
 
 
 model.save('nlp_embedding.h5')
+
 # from keras.models import load_model
 # model = load_model('nlp_embedding.h5')
+
+# scores= model.evaluate(X_test,y_test)
+# print(scores[1])
 
 
 
