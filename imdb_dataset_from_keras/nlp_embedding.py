@@ -52,8 +52,8 @@ print(scores[1])
 
 
 model.save('nlp_embedding.h5')
-from keras.models import load_model
-model = load_model('nlp_embedding.h5')
+# from keras.models import load_model
+# model = load_model('nlp_embedding.h5')
 
 
 
